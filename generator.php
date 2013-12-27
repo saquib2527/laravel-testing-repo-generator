@@ -119,6 +119,8 @@ interface {$this->testObject}RepositoryInterface{
 			$fh = fopen($file, 'w');
  
 			$contents = "<?php namespace Saquib\Storage\\$this->testObject;
+
+use $this->testObject;
  
 class Eloquent{$this->testObject}Repository implements {$this->testObject}RepositoryInterface{
  
