@@ -210,7 +210,7 @@ class {$this->testObject}ControllerTest extends TestCase{
  
 	public function setUp()
 	{
-		Parent::setup();
+		parent::setup();
 		\$this->mock = Mockery::mock('{$this->namespacePrefix}\\{$i}');
 		\$this->app->instance('{$this->namespacePrefix}\\{$i}', \$this->mock);
 	}
