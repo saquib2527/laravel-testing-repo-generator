@@ -210,11 +210,14 @@ use \Mockery;
  
 class {$this->testObject}ControllerTest extends TestCase{
  
+ 	protected \$class;
+	protected \$mock;
+
 	public function setUp()
 	{
 		parent::setup();
-		\$this->mock = Mockery::mock('{$this->namespacePrefix}\\{$i}');
-		\$this->app->instance('{$this->namespacePrefix}\\{$i}', \$this->mock);
+		\$this->class = '{$this->namespacePrefix}\\{$i}';
+		\$this->mock = Mockery::mock(\$this->class);
 	}
  
 	public function tearDown()
